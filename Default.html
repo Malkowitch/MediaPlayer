@@ -3,23 +3,26 @@
 <head>
     <title>Media Player</title>
     <link href="StyleSheet.css" rel="stylesheet" />
-    <script src="LiveUpdate.js"></script>
 </head>
 <body>
     <div id="wrapper">
      
         <div id="mediaplayer">
             <figure>
-                <img src="Images/dragon-rider-1-1680x1050.jpg" />
-               <!-- <video id="media" autoplay>
-                    <source src="strike_back.mp4" type="video/mp4" />
-                </video>-->
+                <video id="media" class="media" poster="Images/EpicBattle.jpg">
+                    <source src="Videos/EpicJediBattle.mp4" type="video/mp4" />
+                    <source src="Videos/EpicJediBattle.webm" type="video/webm" />
+                    <source src="Videos/EpicJediBattle.ogg" type="video/ogg" />
+                    <source src="Videos/EpicJediBattle.ogv" type="video/ogv" />
+                    <img src="Images/dragon-rider-1-1680x1050.jpg" />
+                </video>
                 <div id="mediacontrols">
-                    <div id="mediabutton"><button class="button"></button><button class="button"></button></div>
-                    <div id="mediaprogress"></div>
+                    <div id="mediabutton"><button class="button" onclick="playpause()"></button><button class="button" onclick="mute()"></button><button class="button" onclick="fullscreenmode()"></button></div>
+                    <progress id="mediaprogress" min="0" max="100" value="0"></progress>
                 </div>
             </figure>
         </div>
     </div>
+    <script src="PlayerScript.js"></script>
 </body>
 </html>
